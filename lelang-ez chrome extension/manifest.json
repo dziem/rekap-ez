@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+  "name": "Lelang EZ",
+  "version": "0.1",
+  "author": "dziem",
+ "browser_action": {
+  "default_popup": "newtab.html"
+ },
+ "background":
+    {
+        "scripts": ["jquery-3.2.1.min.js"]
+    },
+	"permissions":["tabs","activeTab","tabCapture","pageCapture","declarativeNetRequest"]
+}

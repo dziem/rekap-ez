@@ -1,3 +1,4 @@
+var execTime = 30000;
 function arrayToCSV (twoDiArray) {
     //  Modified from: http://stackoverflow.com/questions/17836273/
     //  export-javascript-data-to-csv-file-without-server-interaction
@@ -28,15 +29,15 @@ function myLoop (panjang) {           //  create a loop function
 		var popup = window.open(links[i], '_blank', 'width=500,height=500');
 		setTimeout(function(){
 			openmate(popup,i)
-		}, 20000);
+		}, execTime);
 		setTimeout(function() {
 			readmate(i);	
-		}, 21000);          //  your code here
+		}, (execTime + 1000));          //  your code here
 		i++;                     //  increment the counter
 		if (i < panjang) {            //  if the counter < 10, call the loop function
 			myLoop(panjang);             //  ..  again which will trigger another 
 		}                        //  ..  setTimeout()
-   }, 22000)
+   }, (execTime + 2000))
 }
 function openmate(popup,i){
 	popupPage[i]=popup.document;
@@ -80,4 +81,4 @@ var banyakItem = items.length;
 myLoop(banyakItem);
 setTimeout(function() {
 	arrayToCSV(rekaps);
-}, (banyakItem * 22000)+1000);
+}, (banyakItem * (execTime + 2000))+1000);

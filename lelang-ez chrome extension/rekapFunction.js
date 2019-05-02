@@ -28,15 +28,15 @@ function myLoop (panjang) {           //  create a loop function
 		var popup = window.open(links[i], '_blank', 'width=500,height=500');
 		setTimeout(function(){
 			openmate(popup,i)
-		}, 15000);
+		}, 20000);
 		setTimeout(function() {
 			readmate(i);	
-		}, 16000);          //  your code here
+		}, 21000);          //  your code here
 		i++;                     //  increment the counter
 		if (i < panjang) {            //  if the counter < 10, call the loop function
 			myLoop(panjang);             //  ..  again which will trigger another 
 		}                        //  ..  setTimeout()
-   }, 17000)
+   }, 22000)
 }
 function openmate(popup,i){
 	popupPage[i]=popup.document;
@@ -76,9 +76,8 @@ var links = [];
 var popupPage = [];
 var rekaps = [];
 rekaps.push(['Item','Nama','Nilai Bid']);
-//var banyakItem = items.length;
-var banyakItem = 3;
+var banyakItem = items.length;
 myLoop(banyakItem);
 setTimeout(function() {
 	arrayToCSV(rekaps);
-}, (banyakItem * 17000)+1000);
+}, (banyakItem * 22000)+1000);

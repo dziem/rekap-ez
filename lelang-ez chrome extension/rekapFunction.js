@@ -1,4 +1,4 @@
-var execTime = 30000;
+var execTime = 30000; //satuan mili second, set waktu open foto per item bersadarkan performa pc dan internet, karena harus keload sepenuhnya agar dapat terambil data nya
 function arrayToCSV (twoDiArray) {
     //  Modified from: http://stackoverflow.com/questions/17836273/
     //  export-javascript-data-to-csv-file-without-server-interaction
